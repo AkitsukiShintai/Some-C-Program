@@ -1,0 +1,8 @@
+break+++Input file "input1" size is 200
++++Trying to open file "student_test1_0001" OK
++++    checking chunk size, should be 100 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test1_0002" OK
++++    checking chunk size, should be 100 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test1_0003" no extra file - OK

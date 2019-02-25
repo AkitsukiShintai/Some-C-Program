@@ -1,0 +1,11 @@
++++Input file "input3" size is 21000
++++Trying to open file "student_test3_0001" OK
++++    checking chunk size, should be 10000 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test3_0002" OK
++++    checking chunk size, should be 10000 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test3_0003" OK
++++    checking chunk size, should be 1000 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test3_0004" no extra file - OK

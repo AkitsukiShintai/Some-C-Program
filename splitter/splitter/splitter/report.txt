@@ -1,0 +1,1503 @@
+============= CHECK CONTENT BEGINS 2018-09-18 17:37:35 ===============
+Archive:  ../2018-09-18-17-37-35.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-18-17-37-35.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-18 17:37:36 ===============
+Archive:  ../2018-09-18-17-37-35.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+splitter.c: In function 'SplitFile':
+splitter.c:7:35: warning: format '%d' expects argument of type 'int', but argument 3 has type 'size_t {aka long unsigned int}' [-Wformat=]
+  printf("split %s into chunks of %d named\n", filename, size);
+                                  ~^
+                                  %ld
+splitter.c:12:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 4 has type 'int' [-Wformat=]
+   sprintf(current_file_name, "%s%04lu\n", output, file_count++);
+                                 ~~~~^             ~~~~~~~~~~~~
+                                 %04u
+splitter.c:19:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  size_t bufferSize = size < 4096 ? size : 4096;
+  ^~~~~~
+splitter.c:37:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+    int bufferCount = size / bufferSize;
+    ^~~
+splitter.c:44:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+    void* readBuffer = malloc(bufferSize);
+    ^~~~
+splitter.c:51:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+    FILE* outputFile = fopen(output + fileCount, "rb");
+    ^~~~
+splitter.c:58:4: error: 'for' loop initial declarations are only allowed in C99 or C11 mode
+    for (size_t i = 0; i < bufferCount; ++i)
+    ^~~
+splitter.c:58:4: note: use option -std=c99, -std=gnu99, -std=c11 or -std=gnu11 to compile your code
+splitter.c:58:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (size_t i = 0; i < bufferCount; ++i)
+                         ^
+splitter.c:60:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (i == bufferCount - 1)
+           ^~
+splitter.c: In function 'JoinFiles':
+splitter.c:91:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  FILE* outputFile = fopen(output, "rb");
+  ^~~~
+splitter.c:93:10: warning: passing argument 1 of 'perror' from incompatible pointer type [-Wincompatible-pointer-types]
+   perror(outputFile);
+          ^~~~~~~~~~
+In file included from splitter.c:1:0:
+/usr/include/stdio.h:846:13: note: expected 'const char *' but argument is of type 'FILE * {aka struct _IO_FILE *}'
+ extern void perror (const char *__s);
+             ^~~~~~
+splitter.c:98:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  int bufferSize = 4096;
+  ^~~
+splitter.c:104:2: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+  int total_byte_read, bytes_read, bytes_written;
+  ^~~
+splitter.c:111:3: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+   FILE* file = fopen(*filenames, "rb");
+   ^~~~
+splitter.c:113:11: warning: passing argument 1 of 'perror' from incompatible pointer type [-Wincompatible-pointer-types]
+    perror(filenames);
+           ^~~~~~~~~
+In file included from splitter.c:1:0:
+/usr/include/stdio.h:846:13: note: expected 'const char *' but argument is of type 'char **'
+ extern void perror (const char *__s);
+             ^~~~~~
+splitter.c:104:35: warning: variable 'bytes_written' set but not used [-Wunused-but-set-variable]
+  int total_byte_read, bytes_read, bytes_written;
+                                   ^~~~~~~~~~~~~
+make: *** [all] Error 1
+=========RUN SKIPPED DUE TO COMPILE ERRORS
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-18 17:38:40 ===============
+Archive:  ../2018-09-18-17-38-39.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-18-17-38-39.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= CHECK CONTENT BEGINS 2018-09-18 17:38:47 ===============
+Archive:  ../2018-09-18-17-38-46.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-18-17-38-46.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= CHECK CONTENT BEGINS 2018-09-19 18:41:47 ===============
+Archive:  ../2018-09-19-18-41-47.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-19-18-41-47.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-19 18:41:47 ===============
+Archive:  ../2018-09-19-18-41-47.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+splitter.c: In function 'JoinFiles':
+splitter.c:90:35: warning: variable 'bytes_written' set but not used [-Wunused-but-set-variable]
+  int total_byte_read, bytes_read, bytes_written;
+                                   ^~~~~~~~~~~~~
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+driver.o: In function `main':
+driver.cpp:(.text+0x330): undefined reference to `SplitFile(char const*, char const*, unsigned long)'
+driver.cpp:(.text+0x3d6): undefined reference to `JoinFiles(char**, int, char const*)'
+collect2: error: ld returned 1 exit status
+make: *** [all] Error 1
+=========RUN SKIPPED DUE TO COMPILE ERRORS
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-19 18:58:49 ===============
+Archive:  ../2018-09-19-18-58-49.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-19-18-58-49.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-19 18:58:50 ===============
+Archive:  ../2018-09-19-18-58-49.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+splitter.c: In function 'JoinFiles':
+splitter.c:91:35: warning: variable 'bytes_written' set but not used [-Wunused-but-set-variable]
+  int total_byte_read, bytes_read, bytes_written;
+                                   ^~~~~~~~~~~~~
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- failed:
+1,2c1,4
+< test0_0001
+< test0_0002
+---
+> test0_: No such file or directory
+> ls: cannot access test0_????: No such file or directory
+> diff: test0_0001: No such file or directory
+> diff: test0_0002: No such file or directory
+running 1       -- failed:
+1,2c1,3
+< test1_0001
+< test1_0002
+---
+> ls: cannot access test1_????: No such file or directory
+> diff: test1_0001: No such file or directory
+> diff: test1_0002: No such file or directory
+running 2       -- OK
+running mem0    -- failed:
+testmem0_: No such file or directory
+==8644== 100 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==8644==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8644==    by 0x400A41: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==8644==    by 0x40105E: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==8644== 
+running mem1    -- failed:
+testmem1_: No such file or directory
+==8652== 100 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==8652==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==8652==    by 0x400A41: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==8652==    by 0x40105E: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==8652== 
+running mem2    -- failed:
+test2_student_output: No such file or directory
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-19 19:03:05 ===============
+Archive:  ../2018-09-19-19-03-04.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-19-19-03-04.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-19 19:03:05 ===============
+Archive:  ../2018-09-19-19-03-04.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- failed:
+1,2c1,4
+< test0_0001
+< test0_0002
+---
+> test0_: No such file or directory
+> ls: cannot access test0_????: No such file or directory
+> diff: test0_0001: No such file or directory
+> diff: test0_0002: No such file or directory
+running 1       -- failed:
+1,2c1,3
+< test1_0001
+< test1_0002
+---
+> ls: cannot access test1_????: No such file or directory
+> diff: test1_0001: No such file or directory
+> diff: test1_0002: No such file or directory
+running 2       -- OK
+running mem0    -- failed:
+testmem0_: No such file or directory
+==9363== 100 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==9363==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9363==    by 0x400A41: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==9363==    by 0x40105B: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==9363== 
+running mem1    -- failed:
+testmem1_: No such file or directory
+==9371== 100 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==9371==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==9371==    by 0x400A41: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==9371==    by 0x40105B: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==9371== 
+running mem2    -- failed:
+test2_student_output: No such file or directory
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-20 15:20:58 ===============
+Archive:  ../2018-09-20-15-20-58.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-20-15-20-58.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-20 15:20:58 ===============
+Archive:  ../2018-09-20-15-20-58.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+splitter.c: In function 'SplitFile':
+splitter.c:53:4: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+    char * a = malloc(sizeof(char)*50);
+    ^~~~
+splitter.c:12:6: warning: unused variable 'file_count' [-Wunused-variable]
+  int file_count = 1, i = 0;
+      ^~~~~~~~~~
+splitter.c:10:7: warning: unused variable 'current_file_name' [-Wunused-variable]
+  char current_file_name[256];
+       ^~~~~~~~~~~~~~~~~
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- failed:
+2a3
+> test1_0003
+running 2       -- OK
+running mem0    -- failed:
+==12384== 100 bytes in 2 blocks are definitely lost in loss record 1 of 2
+==12384==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12384==    by 0x400A36: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==12384==    by 0x401054: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==12384== 
+==12384== 800 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==12384==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12384==    by 0x4009A3: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==12384==    by 0x401054: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==12384== 
+running mem1    -- failed:
+==12392== 150 bytes in 3 blocks are definitely lost in loss record 1 of 2
+==12392==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12392==    by 0x400A36: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==12392==    by 0x401054: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==12392== 
+==12392== 800 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==12392==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==12392==    by 0x4009A3: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==12392==    by 0x401054: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==12392== 
+running mem2    -- failed:
+test2_student_output: No such file or directory
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-20 16:15:58 ===============
+Archive:  ../2018-09-20-16-15-58.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-20-16-15-58.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-20 16:15:59 ===============
+Archive:  ../2018-09-20-16-15-58.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- failed:
+==18652== 50 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==18652==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18652==    by 0x400862: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==18652==    by 0x400F6F: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==18652== 
+==18652== 800 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==18652==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18652==    by 0x4008F6: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==18652==    by 0x400F6F: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==18652== 
+running mem1    -- failed:
+==18660== 50 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==18660==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18660==    by 0x400862: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==18660==    by 0x400F6F: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==18660== 
+==18660== 800 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==18660==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==18660==    by 0x4008F6: SplitFile (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==18660==    by 0x400F6F: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==18660== 
+running mem2    -- failed:
+test2_student_output: No such file or directory
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-20 16:20:00 ===============
+Archive:  ../2018-09-20-16-20-00.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-20-16-20-00.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-20 16:20:01 ===============
+Archive:  ../2018-09-20-16-20-00.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- failed:
+test2_student_output: No such file or directory
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-20 16:20:54 ===============
+Archive:  ../2018-09-20-16-20-53.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-20-16-20-53.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-20 16:20:54 ===============
+Archive:  ../2018-09-20-16-20-53.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- failed:
+test2_student_output: No such file or directory
+======END REPORT=============
+
+
+============= REPORT BEGINS 2018-09-20 16:22:20 ===============
+Archive:  ../2018-09-20-16-20-53.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- failed:
+test2_student_output: No such file or directory
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-20 16:28:17 ===============
+Archive:  ../2018-09-20-16-28-16.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-20-16-28-16.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-20 16:28:19 ===============
+Archive:  ../2018-09-20-16-28-16.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- failed:
+0a1
+> this file is 120 bytes - it uses linux style new line which is 1 byte, so you see 119 visible characters - with spaces.
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- failed:
+==20403== Syscall param open(filename) points to unaddressable byte(s)
+==20403==    at 0x4F26170: __open_nocancel (syscall-template.S:81)
+==20403==    by 0x4EB0ED7: _IO_file_open (fileops.c:228)
+==20403==    by 0x4EB0ED7: _IO_file_fopen@@GLIBC_2.2.5 (fileops.c:333)
+==20403==    by 0x4EA53D3: __fopen_internal (iofopen.c:90)
+==20403==    by 0x400D81: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20403==    by 0x4011F5: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20403==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
+==20403== 
+Bad address
+==20403== 4,096 bytes in 1 blocks are definitely lost in loss record 2 of 2
+==20403==    at 0x4C2AB80: malloc (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20403==    by 0x400D3E: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20403==    by 0x4011F5: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20403== 
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-20 16:30:18 ===============
+Archive:  ../2018-09-20-16-30-18.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-20-16-30-18.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-20 16:30:18 ===============
+Archive:  ../2018-09-20-16-30-18.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- failed:
+1c1
+< this file is 120 bytes - it uses linux style new line which is 1 byte, so you see 119 visible charac
+\ No newline at end of file
+---
+> this file is 120 bytes - it uses linux style new line which is 1 byte, so you see 119 visible characters - with spaces.
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- failed:
+==20742== Invalid read of size 4
+==20742==    at 0x4EA5CD0: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA5CDF: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000c8 is 136 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA5CEF: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200128 is 232 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA5D10: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200120 is 224 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA5D1A: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000c8 is 136 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA5D21: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000c8 is 136 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EA5D28: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200128 is 232 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA5D2C: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200124 is 228 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA5D31: fwrite (iofwrite.c:42)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200100 is 192 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA5D8A: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200118 is 216 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EB0518: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1294)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB0530: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1311)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200070 is 48 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB0534: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1311)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200068 is 40 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB059F: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200118 is 216 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EB16D7: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:825)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB1740: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:835)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200060 is 32 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB2484: _IO_doallocbuf (genops.c:415)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200078 is 56 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EB2498: _IO_doallocbuf (genops.c:417)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB24A8: _IO_doallocbuf (genops.c:418)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200118 is 216 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA47BE: _IO_file_doallocate (filedoalloc.c:111)
+==20742==    by 0x4EB24B4: _IO_doallocbuf (genops.c:418)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000b0 is 112 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB241C: _IO_setb (genops.c:400)
+==20742==    by 0x4EA4845: _IO_file_doallocate (filedoalloc.c:129)
+==20742==    by 0x4EB24B4: _IO_doallocbuf (genops.c:418)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200078 is 56 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EB2420: _IO_setb (genops.c:400)
+==20742==    by 0x4EA4845: _IO_file_doallocate (filedoalloc.c:129)
+==20742==    by 0x4EB24B4: _IO_doallocbuf (genops.c:418)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB242B: _IO_setb (genops.c:403)
+==20742==    by 0x4EA4845: _IO_file_doallocate (filedoalloc.c:129)
+==20742==    by 0x4EB24B4: _IO_doallocbuf (genops.c:418)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200080 is 64 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB2439: _IO_setb (genops.c:402)
+==20742==    by 0x4EA4845: _IO_file_doallocate (filedoalloc.c:129)
+==20742==    by 0x4EB24B4: _IO_doallocbuf (genops.c:418)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200078 is 56 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 4
+==20742==    at 0x4EB2440: _IO_setb (genops.c:405)
+==20742==    by 0x4EA4845: _IO_file_doallocate (filedoalloc.c:129)
+==20742==    by 0x4EB24B4: _IO_doallocbuf (genops.c:418)
+==20742==    by 0x4EB1867: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:837)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB1868: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:838)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200078 is 56 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EB186C: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:838)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB186E: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:838)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200058 is 24 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB1872: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:838)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200048 is 8 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB1876: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:838)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200050 is 16 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB175B: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:856)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200080 is 64 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB1768: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:856)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200050 is 16 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EB176C: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:864)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200100 is 192 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB1772: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:860)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200070 is 48 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB177B: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:861)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200048 is 8 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB177F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:861)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200058 is 24 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB1783: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:858)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200068 is 40 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB1787: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:859)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200060 is 32 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 4
+==20742==    at 0x4EB1790: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:863)
+==20742==    by 0x4EB05B0: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1332)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB05BA: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1338)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200080 is 64 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB05BE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1338)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200078 is 56 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB2628: _IO_default_xsputn (genops.c:455)
+==20742==    by 0x4EB05F1: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1353)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200068 is 40 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB262D: _IO_default_xsputn (genops.c:455)
+==20742==    by 0x4EB05F1: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1353)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200070 is 48 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB25F9: _IO_default_xsputn (genops.c:475)
+==20742==    by 0x4EB05F1: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1353)
+==20742==    by 0x4EA5D9C: fwrite (iofwrite.c:43)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200068 is 40 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA5D44: _IO_acquire_lock_fct (libioP.h:904)
+==20742==    by 0x4EA5D44: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA5D4C: _IO_acquire_lock_fct (libioP.h:905)
+==20742==    by 0x4EA5D4C: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000c8 is 136 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA5D53: _IO_acquire_lock_fct (libioP.h:905)
+==20742==    by 0x4EA5D53: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200124 is 228 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EA5DD0: _IO_acquire_lock_fct (libioP.h:905)
+==20742==    by 0x4EA5DD0: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200128 is 232 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA5DE9: _IO_acquire_lock_fct (libioP.h:905)
+==20742==    by 0x4EA5DE9: fwrite (iofwrite.c:41)
+==20742==    by 0x400D9C: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200120 is 224 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA48D4: fclose@@GLIBC_2.2.5 (iofclose.c:54)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA48ED: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000c8 is 136 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA48FD: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200128 is 232 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA491E: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200120 is 224 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA4928: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000c8 is 136 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA492F: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000c8 is 136 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA4936: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EA4938: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200128 is 232 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA493C: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200124 is 228 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA4959: _IO_acquire_lock_fct (libioP.h:905)
+==20742==    by 0x4EA4959: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000c8 is 136 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA4960: _IO_acquire_lock_fct (libioP.h:905)
+==20742==    by 0x4EA4960: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200124 is 228 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EA4A70: _IO_acquire_lock_fct (libioP.h:905)
+==20742==    by 0x4EA4A70: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200128 is 232 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA4A8C: _IO_acquire_lock_fct (libioP.h:905)
+==20742==    by 0x4EA4A8C: fclose@@GLIBC_2.2.5 (iofclose.c:57)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200120 is 224 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA4970: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200118 is 216 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EB0C81: _IO_file_finish@@GLIBC_2.2.5 (fileops.c:203)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000b0 is 112 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB2CD4: _IO_default_finish (genops.c:688)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200078 is 56 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 1
+==20742==    at 0x4EB2CDD: _IO_default_finish (genops.c:688)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB2D20: _IO_default_finish (genops.c:690)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200080 is 64 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB2D3A: _IO_default_finish (genops.c:691)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200080 is 64 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 8
+==20742==    at 0x4EB2D42: _IO_default_finish (genops.c:691)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200078 is 56 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB2CE2: _IO_default_finish (genops.c:694)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x52000a0 is 96 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EB2D00: _IO_default_finish (genops.c:697)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200088 is 72 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 1
+==20742==    at 0x4EB19A9: _IO_un_link (genops.c:61)
+==20742==    by 0x4EA497E: fclose@@GLIBC_2.2.5 (iofclose.c:63)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 4
+==20742==    at 0x4EA497F: fclose@@GLIBC_2.2.5 (iofclose.c:64)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200100 is 192 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid read of size 8
+==20742==    at 0x4EA4A30: fclose@@GLIBC_2.2.5 (iofclose.c:79)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200088 is 72 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid write of size 4
+==20742==    at 0x4EA4A17: fclose@@GLIBC_2.2.5 (iofclose.c:84)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+==20742== Invalid free() / delete / delete[] / realloc()
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==  Address 0x5200040 is 0 bytes inside a block of size 568 free'd
+==20742==    at 0x4C2BDEC: free (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==20742==    by 0x4EA4A24: fclose@@GLIBC_2.2.5 (iofclose.c:85)
+==20742==    by 0x400DAE: JoinFiles (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742==    by 0x4011B0: main (in /data/upload/cs525f18/splitter/w.zhongqiu/temp/splitter-w.zhongqiu.exe)
+==20742== 
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-20 16:39:35 ===============
+Archive:  ../2018-09-20-16-39-34.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-20-16-39-34.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-20 16:39:35 ===============
+Archive:  ../2018-09-20-16-39-34.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- OK
+======END REPORT=============
+
+
+============= REPORT BEGINS 2018-09-24 12:32:08 ===============
+Archive:  ../2018-09-20-16-39-34.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- OK
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-24 12:38:47 ===============
+Archive:  ../2018-09-24-12-38-47.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-24-12-38-47.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-24 12:38:48 ===============
+Archive:  ../2018-09-24-12-38-47.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- OK
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-24 12:44:54 ===============
+Archive:  ../2018-09-24-12-44-53.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-24-12-44-53.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-24 12:44:54 ===============
+Archive:  ../2018-09-24-12-44-53.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- OK
+======END REPORT=============
+
+
+============= CHECK CONTENT BEGINS 2018-09-24 14:52:00 ===============
+Archive:  ../2018-09-24-14-52-00.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+Checking content of 2018-09-24-14-52-00.zip
+splitter.c found
+splitter.h found
+============= CHECK CONTENT ENDS ==========================
+
+============= REPORT BEGINS 2018-09-24 14:52:01 ===============
+Archive:  ../2018-09-24-14-52-00.zip
+  inflating: splitter.c              
+  inflating: splitter.h              
+======== COMPILE all ==============
+Compile with C and C++
+gcc -c splitter.c -Wall -Wextra -ansi -pedantic -Wunused
+g++ -c driver.cpp -Wall -Wextra -ansi -pedantic -Wunused
+g++ -o splitter-w.zhongqiu.exe splitter.o driver.o -Wall -Wextra -ansi -pedantic -Wunused
+=========RUN=================
+running 0       -- OK
+running 1       -- OK
+running 2       -- OK
+running mem0    -- OK
+running mem1    -- OK
+running mem2    -- OK
+======END REPORT=============

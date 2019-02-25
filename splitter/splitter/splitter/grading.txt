@@ -1,0 +1,50 @@
+Compile target gcc_cpp :compiled cleanly. Grade 5 (out of 5)
+Compile target gcc_c :compiled cleanly. Grade 5 (out of 5)
+Compile target gcc_c_cpp :compiled cleanly. Grade 5 (out of 5)
+Compile target drmem :compiled cleanly. Grade 0 (out of 0)
+Running tests:
+-------------
+###############
+# split tests #
+###############
+Test 0 : using "./gcc_c_cpp.exe 0 > student_out_test0", timeout 300
+	Output OK. Grade 8 (out of 8), time is 5, full grade if <300
+Test 1 : using "./gcc_cpp.exe 1 > student_out_test1", timeout 300
+	Errors in output - see "student_out_test1". Grade 0 (base 7)
+Test 2 : using "./gcc_c.exe 2 > student_out_test2", timeout 300
+	Errors in output - see "student_out_test2". Grade 0 (base 7)
+Test 3 : using "./gcc_cpp.exe 3 > student_out_test3", timeout 300
+	Output OK. Grade 7 (out of 7), time is 5, full grade if <300
+Test 4 : using "./gcc_c.exe 4 > student_out_test4", timeout 300
+	Output OK. Grade 7 (out of 7), time is 5, full grade if <300
+##############
+# join tests #
+##############
+Test 5 : using "./gcc_c_cpp.exe 5 > student_out_test5", timeout 300
+	Output OK. Grade 7 (out of 7), time is 5, full grade if <300
+Test 6 : using "./gcc_c.exe 6 > student_out_test6", timeout 300
+	Output OK. Grade 7 (out of 7), time is 5, full grade if <300
+###########################################
+# split and join bigger file 105717 bytes #
+###########################################
+Test 7 : using "./gcc_c_cpp.exe 7 > student_out_test7", timeout 300
+	Output OK. Grade 7 (out of 7), time is 10, full grade if <300
+################################################################
+# stress test 260121250 bytes into 16 Mb chunks split and join #
+################################################################
+Test 11 : using "./gcc_c.exe 11 > student_out_test11", timeout 25000
+	Output OK. Grade 28 (out of 28), time is 6370, full grade if <12000
+################
+# memory tests #
+################
+Test 107 : using "valgrind --xml-file=valgrind-test7.xml ./gcc_c_cpp.exe 7 ", timeout 2000
+	No memory errors. Grade 0 (out of -7)
+Test 108 : using "valgrind --xml-file=valgrind-test8.xml ./gcc_cpp.exe 8 ", timeout 2000
+	No memory errors. Grade 0 (out of -7)
+Test 109 : using "valgrind --xml-file=valgrind-test9.xml ./gcc_c_cpp.exe 9 ", timeout 2000
+	No memory errors. Grade 0 (out of -7)
+Test 110 : using "valgrind --xml-file=valgrind-test10.xml ./gcc_cpp.exe 10 ", timeout 2000
+	There are memory errors - see "valgrind-test10.xml". Grade -7 (out of -7)
+		error - Leak_StillReachable, count 1
+		error - Leak_DefinitelyLost, count 1
+Current grade is 79 out of 100.

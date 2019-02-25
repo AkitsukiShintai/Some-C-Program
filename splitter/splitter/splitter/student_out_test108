@@ -1,0 +1,7 @@
+split input8 into chunks of -2147483648 named
+120
++++Input file "input8" size is 120
++++Trying to open file "student_test8_0001" OK
++++    checking chunk size, should be 120 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test8_0002" no extra file - OK

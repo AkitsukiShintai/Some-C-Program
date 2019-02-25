@@ -1,0 +1,82 @@
++++Input file "../../large.file.data" size is 260121250
++++Trying to open file "student_test11_0001" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0002" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0003" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0004" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0005" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0006" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0007" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0008" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0009" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0010" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0011" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0012" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0013" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0014" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0015" OK
++++    checking chunk size, should be 16777216 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0016" OK
++++    checking chunk size, should be 8463010 OK
++++    checking the content of the chunk OK
++++Trying to open file "student_test11_0017" no extra file - OK
++++Open chunk "student_test11_0001" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0002" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0003" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0004" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0005" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0006" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0007" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0008" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0009" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0010" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0011" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0012" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0013" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0014" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0015" OK
++++  chunk and joined file match
++++Open chunk "student_test11_0016" OK
++++  chunk and joined file match
